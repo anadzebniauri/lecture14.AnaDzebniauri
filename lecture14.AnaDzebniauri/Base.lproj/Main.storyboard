@@ -29,7 +29,7 @@
             <objects>
                 <viewController storyboardIdentifier="LoginPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginPage" customModule="lecture14_AnaDzebniauri" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mTe-3D-42V">
@@ -88,7 +88,7 @@
             <objects>
                 <viewController storyboardIdentifier="RegistrationPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2TK-1V-5rA" customClass="RegistrationPage" customModule="lecture14_AnaDzebniauri" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Db9-3l-Pkx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RqZ-3J-HFc">
@@ -109,7 +109,7 @@
                                 <rect key="frame" x="71" y="536" width="272" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="placeholderTextColor"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjO-SN-BNF">
@@ -219,13 +219,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xS-c9-2AN">
-                                <rect key="frame" x="67" y="516" width="116" height="38"/>
+                                <rect key="frame" x="67" y="516" width="116" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Yes"/>
                                 <connections>
-                                    <action selector="yesBtn:" destination="tHG-hz-yhB" eventType="touchUpInside" id="XZl-8X-jZR"/>
+                                    <action selector="yesBtn:" destination="tHG-hz-yhB" eventType="touchUpInside" id="xeQ-Gd-7tj"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="SZe-yq-FcB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thU-RZ-sLU">
@@ -245,7 +246,7 @@
                     <navigationItem key="navigationItem" id="EBI-9u-njf"/>
                     <connections>
                         <outlet property="noButton" destination="thU-RZ-sLU" id="i2U-Jg-Jp7"/>
-                        <outlet property="yesButton" destination="2xS-c9-2AN" id="Chs-7X-gEo"/>
+                        <outlet property="yesButton" destination="2xS-c9-2AN" id="VUQ-EX-Rt2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9M-Nb-zac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -253,6 +254,9 @@
             <point key="canvasLocation" x="2679.7101449275365" y="43.526785714285715"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="SZe-yq-FcB"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>

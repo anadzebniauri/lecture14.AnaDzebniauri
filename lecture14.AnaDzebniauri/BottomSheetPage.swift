@@ -17,21 +17,26 @@ class BottomSheetPage: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func yesBtn(_ sender: Any) {
-//        if self.navigationController != nil {
-//            self.dismiss(animated: true)
-//        }
-    func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        }
-        viewWillDisappear(true)
-    }
     
+    @IBAction func yesBtn(_ sender: Any) {
+        if  self.navigationController == nil {
+//            self.dismiss(animated: true)
+            let loginPage = self.storyboard?.instantiateViewController(withIdentifier: "LoginPage") as? LoginPage
+            guard let loginPage = loginPage else { return }
+            self.navigationController?.pushViewController(loginPage, animated: true)
+        }
+        else {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+
     
     @IBAction func noBtn(_ sender: Any) {
+        if self.navigationController == nil {
+            self.dismiss(animated: true)
+        }
+        else {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
-    
-    
-
 }
